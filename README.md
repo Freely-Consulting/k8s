@@ -1,6 +1,22 @@
 # k8s Homelab
 
+## Development
+- `make localhost-setup` -> change to run
+- `make sim-prod-up`
+- `kubectl get services | awk '/LoadBalancer/{ print $1}' | xargs minikube service`
+- `make sim-prod-down`
+
+### Required Software
+- Docker
+- Minikube
+- Kubectl
+- Nodejs
+### Set Up
+1. Ensure 
+### Key Linux Commands
+- ``
 ## Notes
+
 - Kubernetes Technologies: minikube, kubeadm, kind, k3s
 
 Whenever I implement something, I consider three scenarios: dev, test, and
@@ -14,5 +30,7 @@ could spin up VMs on my machine and use kubeadm, but
 
 ## TODO
 1. minikube 
+a. Make script that executes these [instructions](https://gist.github.com/trisberg/37c97b6cc53def9a3e38be6143786589)
+
 2. kubeadm
 3. eks with open tofu
